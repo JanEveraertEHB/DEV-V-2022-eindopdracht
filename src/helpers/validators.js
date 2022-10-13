@@ -1,7 +1,10 @@
 
 /**
+ * validate the measures that were sent
  * 
- * 
+ * @params: {float} measure: the recorded measure
+ * @params: {String} type: the type of measurements
+ * @returns: true if within bounds, false if not
 */
 
 function measureValidator(measure, type) {

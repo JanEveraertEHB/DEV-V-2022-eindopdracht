@@ -18,3 +18,8 @@ function measureValidator(measure, type) {
   }
   return false
 }
+
+
+module.exports = {
+  measureValidator
+}

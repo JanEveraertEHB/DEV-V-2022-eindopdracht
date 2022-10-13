@@ -1,5 +1,6 @@
 
 const { validateRequest } = require("./../helpers/requestHelpers.js");
+const { measureValidator } = require("./../helpers/validators.js");
 
 /**
  * TEMPLATES
@@ -51,6 +52,9 @@ const measurements = {
         if(err) {
           res.send(err)
         } else {
+          if(measureValidator(req.body.value, "NO2")) {
+            console.log("within bounds")
+          }
           pg.insert({...req.body}).table("measurements").returning("*").then((data) => {
             res.send(data)
           })

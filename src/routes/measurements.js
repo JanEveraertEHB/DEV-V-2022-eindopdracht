@@ -1,5 +1,6 @@
 
 const { validateRequest } = require("./../helpers/requestHelpers.js");
+const { measureValidator } = require("./../helpers/validators.js");
 
 /**
  * TEMPLATES
